@@ -1,0 +1,2 @@
+INDEX VERSION 1.134+D:\Universidad\GII\3ºGII\Cuatrimestre1\TDS\Practicas\gestion_de_gastos\GestionGastos\.metadata\.plugins\org.eclipse.jdt.core
+1865797976.index

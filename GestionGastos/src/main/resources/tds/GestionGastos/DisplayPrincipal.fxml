@@ -1,0 +1,84 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Menu?>
+<?import javafx.scene.control.MenuBar?>
+<?import javafx.scene.control.MenuItem?>
+<?import javafx.scene.control.SeparatorMenuItem?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.layout.AnchorPane?>
+
+<AnchorPane minHeight="500.0" minWidth="1000.0" prefHeight="600.0" prefWidth="1200.0" xmlns="http://javafx.com/javafx/26" xmlns:fx="http://javafx.com/fxml/1" fx:controller="umu.tds.vista.DisplayPrincipalControllerView">
+   <children>
+      <MenuBar prefHeight="33.0" AnchorPane.leftAnchor="0" AnchorPane.rightAnchor="0" AnchorPane.topAnchor="0">
+        <menus>
+          <Menu mnemonicParsing="false" text="Archivo">
+            <items>
+                  <MenuItem mnemonicParsing="false" onAction="#importarDatos" text="Importar datos" />
+                  <MenuItem mnemonicParsing="false" onAction="#exportarDatos" text="Exportar datos" />
+                  <SeparatorMenuItem mnemonicParsing="false" />
+              <MenuItem mnemonicParsing="false" onAction="#cerrarPrograma" text="Cerrar programa" />
+            </items>
+          </Menu>
+          <Menu mnemonicParsing="false" text="Editar">
+            <items>
+                  <Menu mnemonicParsing="false" text="Alertas">
+                    <items>
+                      <MenuItem mnemonicParsing="false" onAction="#abrirAlertas" text="Gestionar alertas..." />
+                      <MenuItem mnemonicParsing="false" onAction="#abrirHistorial" text="Ver historial..." />
+                      <MenuItem mnemonicParsing="false" onAction="#borrarHistorial" text="Borrar historial" />
+                    </items>
+                  </Menu>
+                  <Menu mnemonicParsing="false" text="Categorias">
+                     <items>
+                    <MenuItem mnemonicParsing="false" onAction="#nuevaCategoria" text="Nueva categoría" />
+                    <MenuItem mnemonicParsing="false" onAction="#eliminarCategoria" text="Eliminar categoría" />
+                     </items>
+                  </Menu>
+                  <Menu mnemonicParsing="false" text="Cuentas">
+                     <items>
+                    <MenuItem mnemonicParsing="false" onAction="#abrirNuevaCuenta" text="Nueva cuenta" />
+                    <MenuItem mnemonicParsing="false" onAction="#eliminarCuenta" text="Eliminar cuenta" />
+                     </items>
+                  </Menu>
+                  <Menu mnemonicParsing="false" text="Filtros">
+                    <items>
+                      <MenuItem mnemonicParsing="false" onAction="#abrirFiltros" text="Aplicar filtro..." />
+                      <MenuItem mnemonicParsing="false" onAction="#limpiarFiltro" text="Limpiar filtro" />
+                    </items>
+                  </Menu>
+            </items>
+          </Menu>
+          <Menu mnemonicParsing="false" text="Ayuda">
+            <items>
+              <MenuItem mnemonicParsing="false" onAction="#abrirManual" text="Manual de usuario" />
+            </items>
+          </Menu>
+            <Menu mnemonicParsing="false" text="Vista">
+              <items>
+                <MenuItem mnemonicParsing="false" onAction="#abrirCLI" text="CLI" />
+                  <SeparatorMenuItem mnemonicParsing="false" />
+                  <Menu fx:id="generarInforme" mnemonicParsing="false" text="Diagramas...">
+                    <items>
+                      <MenuItem fx:id="diagrama_de_barras" mnemonicParsing="false" onAction="#generarInformeBarras" text="Diagrama de barras" />
+                        <MenuItem fx:id="diagrama_circular" mnemonicParsing="false" onAction="#generarInformeCircular" text="Diagrama circular" />
+                        <MenuItem fx:id="diagrama_calendario" mnemonicParsing="false" onAction="#generarInformeCalendario" text="Diagrama en calendario" />
+                    </items>
+                  </Menu>
+              </items>
+            </Menu>
+        </menus>
+      </MenuBar>
+      <TableView fx:id="tablaGastos" layoutX="240.8" prefHeight="566.0" prefWidth="659.0" AnchorPane.bottomAnchor="0" AnchorPane.leftAnchor="241.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="34">
+        <columns>
+            <TableColumn fx:id="cuentaColumn" prefWidth="122.40003657341003" text="Cuenta" />
+          <TableColumn fx:id="clienteColumn" prefWidth="106.4000244140625" text="Cliente" />
+            <TableColumn fx:id="importeColumn" prefWidth="132.80006408691406" text="Importe" />
+            <TableColumn fx:id="categoriaColumn" prefWidth="194.39996337890625" text="Categoría" />
+            <TableColumn fx:id="fechaColumn" prefWidth="206.39996337890625" text="Fecha del gasto" />
+            <TableColumn fx:id="conceptoColumn" prefWidth="218.39990234375" text="Concepto" />
+        </columns>
+      </TableView>
+      <fx:include fx:id="gastoForm" source="GastoForm.fxml" AnchorPane.bottomAnchor="0" AnchorPane.leftAnchor="0" AnchorPane.topAnchor="30.0" />
+   </children>
+</AnchorPane>

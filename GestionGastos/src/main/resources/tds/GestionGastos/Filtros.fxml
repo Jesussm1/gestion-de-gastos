@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.CheckBox?>
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.DatePicker?>
+<?import javafx.scene.control.ListView?>
+<?import javafx.scene.control.Separator?>
+<?import javafx.scene.control.Spinner?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.VBox?>
+
+<VBox prefHeight="380" prefWidth="420.0" spacing="8.0" style="-fx-padding: 15;" xmlns="http://javafx.com/javafx/25" xmlns:fx="http://javafx.com/fxml/1" fx:controller="umu.tds.vista.FiltrosControllerView">
+   <children>
+
+      <CheckBox fx:id="filtroMesCheck" text="Filtrar por mes" />
+      <HBox fx:id="filtroMesPanel" spacing="8.0">
+         <children>
+            <ComboBox fx:id="mesCombo" prefWidth="160.0" promptText="Mes" />
+            <Spinner fx:id="yearSpinner" editable="true" prefWidth="90.0" />
+         </children>
+      </HBox>
+
+      <Separator />
+
+      <CheckBox fx:id="filtroFechaCheck" text="Filtrar por rango de fechas" />
+      <HBox fx:id="filtroFechaPanel" spacing="8.0">
+         <children>
+            <DatePicker fx:id="desdeDate" prefWidth="185.0" promptText="Desde" />
+            <DatePicker fx:id="hastaDate" prefWidth="185.0" promptText="Hasta" />
+         </children>
+      </HBox>
+
+      <Separator />
+
+      <CheckBox fx:id="filtroCategoriaCheck" text="Filtrar por categorías (Ctrl+clic para seleccionar varias)" />
+      <ListView fx:id="categoriasList" prefHeight="120.0" />
+
+      <Separator />
+
+      <HBox alignment="CENTER_RIGHT" spacing="10.0">
+         <children>
+            <Button defaultButton="true" onAction="#aplicar" text="Aplicar" />
+            <Button onAction="#cancelar" text="Cancelar" />
+         </children>
+      </HBox>
+
+   </children>
+</VBox>

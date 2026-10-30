@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.DatePicker?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+
+<AnchorPane prefHeight="567.0" prefWidth="241.0" xmlns="http://javafx.com/javafx/25" xmlns:fx="http://javafx.com/fxml/1" fx:controller="umu.tds.vista.FormGastosControllerView">
+   <children>
+      <ComboBox fx:id="cuentaComboBox" layoutX="34.0" layoutY="63.0" prefHeight="36.0" prefWidth="183.0" promptText="Cuenta" />
+      <ComboBox fx:id="clienteComboBox" layoutX="34.0" layoutY="115.0" prefHeight="39.0" prefWidth="183.0" promptText="Cliente" />
+      <TextField fx:id="importeTextField" layoutX="34.0" layoutY="170.0" prefWidth="183.0" promptText="Importe" />
+      <ComboBox fx:id="categoriaComboBox" layoutX="34.0" layoutY="221.0" prefHeight="39.0" prefWidth="183.0" promptText="Categoría" />
+      <DatePicker fx:id="fechaCreacionDatePicker" layoutX="35.0" layoutY="278.0" prefHeight="33.0" prefWidth="183.0" promptText="Fecha del gasto" />
+      <TextField fx:id="conceptoTextField" layoutX="34.0" layoutY="326.0" prefWidth="183.0" promptText="Concepto" />
+      <Button fx:id="generarGastoButton" layoutX="63.0" layoutY="400.0" mnemonicParsing="false" onAction="#guardarGasto" prefHeight="39.0" prefWidth="155.0" text="Generar gasto" />
+      <Button fx:id="eliminarGastoButton" layoutX="63.0" layoutY="461.0" mnemonicParsing="false" onAction="#eliminarGasto" prefHeight="39.0" prefWidth="155.0" text="Eliminar gasto" />
+   </children>
+</AnchorPane>

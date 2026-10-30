@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.chart.BarChart?>
+<?import javafx.scene.chart.CategoryAxis?>
+<?import javafx.scene.chart.NumberAxis?>
+<?import javafx.scene.chart.PieChart?>
+<?import javafx.scene.control.Tab?>
+<?import javafx.scene.control.TabPane?>
+<?import javafx.scene.layout.BorderPane?>
+
+<BorderPane prefHeight="600" prefWidth="800" xmlns="http://javafx.com/javafx/25" xmlns:fx="http://javafx.com/fxml/1" fx:controller="umu.tds.vista.InformeControllerView">
+
+    <center>
+        <TabPane fx:id="generarInforme">
+            <tabs>
+                <Tab closable="false" text="Diagrama de barras">
+                    <content>
+                        <BarChart fx:id="barChart">
+                            <xAxis><CategoryAxis label="Categoría" /></xAxis>
+                            <yAxis><NumberAxis label="Importe (€)" /></yAxis>
+                        </BarChart>
+                    </content>
+                </Tab>
+                <Tab closable="false" text="Diagrama circular">
+                    <content>
+                        <PieChart fx:id="pieChart" />
+                    </content>
+                </Tab>
+                <Tab closable="false" text="Calendario">
+                    <content>
+                        <BorderPane fx:id="calendarioPane" />
+                    </content>
+                </Tab>
+            </tabs>
+        </TabPane>
+    </center>
+
+</BorderPane>
